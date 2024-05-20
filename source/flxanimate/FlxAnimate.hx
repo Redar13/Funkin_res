@@ -240,11 +240,6 @@ class FlxAnimate extends FlxSprite
 
 			rMatrix.identity();
 			rMatrix.translate(-limb.offset.x, -limb.offset.y);
-			if (limb.angle == FlxFrameAngle.ANGLE_NEG_90)
-			{
-				rMatrix.rotateByNegative90();
-				rMatrix.translate(0, limb.sourceSize.x);
-			}
 			rMatrix.concat(_matrix);
 
 			getScreenPosition(_point, camera).subtractPoint(offset);
